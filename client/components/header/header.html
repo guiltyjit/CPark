@@ -1,0 +1,33 @@
+<template name="header">
+    <div class="{{styles.headerWrapper}}">
+        <div class="{{styles.nav}}">
+            <nav>
+                <a href="/map">Real Life Stories</a>
+                <a href="/knowMyRight">Know Your Rights</a>
+                <a href="/safetyInformationPage">Take Action</a>
+            </nav>
+        </div>
+    </div>
+</template>
+<template name="signInSystem">
+    <div style="display: inline-table; margin: auto;">
+        {{#with isGuest}}
+            <div class="dropdown">
+                Hi,<a id="mt-command-dd" class="dropdown-toggle" data-toggle="dropdown"> {{firstName}} <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation">
+                        <a class="urlRedirect" role="menuitem" tabindex="-1" id="config-request-command" href="{{pathFor route='MyEnquiries'}}">My Enquiries</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="urlRedirect" role="menuitem" tabindex="-1" href="{{pathFor route='AccountDetail'}}">Account Setting</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="urlRedirect logout font-color-red" role="menuitem" tabindex="-1" href="#">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        {{else}}
+            <a href="" name="linkLogin" id="btnLogin">Login | Register</a>
+        {{/with}}
+    </div>
+</template>

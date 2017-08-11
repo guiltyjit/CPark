@@ -1,0 +1,12 @@
+<template name="sort">
+    <div class="{{styles.sortFontFormat}}">Sort by:
+      <select class="{{style.sortDropDown}}" name="fromMonth" >
+			  {{#each sortLists}}
+				<option value="{{value}}">{{text}}</option>
+			  {{/each}}
+			</select>
+      <div align="right">
+        <input type="button" id="btnCompare" name="btnCompare" style="border:0px;" value="Compare{{#if compareCount}} ({{compareCount}}){{/if}}" class="{{styles.btnCompare}}"/>
+      </div>
+    </div>
+</template>

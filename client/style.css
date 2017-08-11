@@ -1,0 +1,127 @@
+/*Common css file.*/
+
+/* https://github.com/daneden/animate.css */
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css";
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*:global {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body:global {
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+form{
+    margin: 0;
+    padding: 0;
+}
+
+.containerWrapper:global {
+    width: 100%;
+    margin: 0 auto;
+    background: #263238;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    padding: 20px 10% 20px;
+    width: 100%;
+}
+article{
+  width: 100%;
+}
+.container:global {
+    padding: 0 15%;
+}
+
+.bottomSpacing{
+  margin-bottom: 10px;
+}
+.font{
+  color:#797979;
+  font-size: large;
+  font-weight: lighter;
+}
+
+.locationBody{
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 21px;
+}
+
+.btn{
+    border-radius: 5px;
+}
+:global .dropdown-toggle{
+    cursor: pointer;
+}
+:global .btnActiveGreen.active,
+:global .btnActiveGreen:hover ,
+:global .btnActiveGreen:active,
+:global .btnActiveGreen:visited
+{
+    color: #fff;
+    background-color: #40740a;
+    border-color: #40740a;
+}
+
+.btn-green{
+    color: #fff;
+    background-color: #56a800;
+    border-color: #56a800;
+}
+
+.btn-green:hover,.btn-green:focus{
+
+    color: #fff;
+    background-color: #40740a;
+    border-color: #40740a;
+}
+.btn-yellow{
+    color: #000;
+    background-color: #fef200;
+    border-color: #fef200;
+}
+
+.btn-yellow:hover,.btn-yellow:focus{
+    color: #fff;
+    background-color: #d6cd03;
+    border-color: #d6cd03;
+}
+
+.redirect-to-add{
+  margin-right: 1rem;
+}
+
+.fieldText{
+    color: #000000;
+    border-radius: 10px;
+}
+
+/*Color*/
+.color-deep-blue{
+    background-color: #1c3f94;
+}
+
+.color-deep-yellow{
+    background-color: #FEF200;
+}
+
+.color-light-grey {
+    background-color: #EFEFEF;
+}
+
+@media screen and (min-width:600px) {
+    body {
+        font-size: 18px;
+    }
+}
+

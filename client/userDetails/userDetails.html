@@ -1,0 +1,22 @@
+<template name="userDetails">
+    <div class="userMain {{styles.userDetailsSection}}">
+         <div class="animated fadeInRight {{styles.detailsSectionA}}">
+            <p style="color:grey"><i>We would like to share some of the experiences of human trafficking victims with you. The story is short and it will be automated. The information you provide in this section will match one of our victim's personality.</i></p>
+            <h3>Hello, select your gender</h3>
+            <button type="button" class="{{styles.buttonChoice}}" name="male">Male</button>
+            <button type="button" class="{{styles.buttonChoice}}" name="female">Female</button>
+        </div>
+        <div class="animated fadeInRight {{styles.detailsSectionB}}">
+            <h3>Select your age group</h3>
+            <button type="button" class="{{styles.buttonChoice}}" name="grp1">0 - 17</button><br>
+            <button type="button" class="{{styles.buttonChoice}}" name="grp2">18 - 25</button><br>
+            <button type="button" class="{{styles.buttonChoice}}" name="grp3">26 - 35</button><br>
+            <button type="button" class="{{styles.buttonChoice}}" name="grp4">> 35</button>
+        </div>
+        <div class="animated fadeInRight {{styles.detailsSectionC}}">
+            <h3> Are you working now? </h3>
+            <button type="button" class="{{styles.buttonChoice}}" name="yes">Yes</button><br>
+            <button type="button" class="{{styles.buttonChoice}}" name="no">No</button>
+         </div> 
+    </div>
+</template>

@@ -1,0 +1,149 @@
+<template name="asideNav">
+    <div class="{{styles.asideNavWrapper}}">
+        <!---->
+        <div class="{{styles.tabs}}">
+            <div id="tabContent1" class="active {{styles.tabContent}}">
+
+                <div class="{{styles.title}}" align="center">Filter</div>
+                <form name="filter-form" id="filter-form">
+                <div class="{{styles.filterMainContainer}}">
+                    {{> ProviderFilter}}
+                    {{> CategoryFilter}}
+                    {{> NameFilter}}
+                    {{> QualificationFilter}}
+                    {{> StudyModeFilter}}
+                    {{> IntakeMonthsFilter}}
+                    {{> DeliveryModeFilter}}
+                    {{#with showLocation}}
+                        {{> LocationFilter}}
+                    {{/with}}
+                    {{> CourseDurationFilter}}
+                    <!--todo: rating-->
+                    <!--{{> RatingFilter}}-->
+                </div>
+                <div class="" align="center">
+                    <input type="submit" id="filter-form-submit" name="btn-submit" value="SEARCH" class="{{styles.btnSearch}}"/>
+                </div>
+                </form>
+            </div> <!-- #tab-content1 -->
+            <div id="tabContent2" class="{{styles.tabContent}}">
+                {{> filteredList}}
+            </div> <!-- #tab-content2 -->
+        </div>
+        <!---->
+    </div>
+</template>
+
+
+<template name="filteredList">
+        <div class="{{styles.filtered}}" align="center">
+            <button class="{{styles.btnBackToFilter}}">&lsaquo;</button>
+            Filtered by
+        </div>
+        <div class="{{styles.filterFontFormat}}">
+        {{#each listFilter}}
+            {{#if label}}
+                 <div class="{{styles.filterContent}}">
+                    <label for="{{key}}">{{title}}</label>
+                    {{#each label}}
+                        {{#if this}}
+                        <div name="{{this}}" class="{{styles.item}}" data-key="{{this}}"> {{this}}<a href="#" class="{{styles.btnDelete}}" id="btnDelete">x</a></div>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            {{/if}}
+        {{/each}}
+        </div>
+</template>
+
+<template name="StudyModeFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="buttonGroupstudyMode">STUDY MODE</label>
+        {{#with buttonGroup}}
+            <div class="{{styles.buttonGroup}}">
+                {{#each buttonGroup}}
+                    <button id="{{key}}" class="btn btn-studyMode btnActiveGreen" value="{{key}}">{{label}}</button>
+                {{/each}}
+            </div>
+        {{/with}}
+    </div>
+</template>
+<template name="IntakeMonthsFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="txtIntakeMonth">INTAKE MONTH</label>
+        <select name="cbxIntakeMonth" class="cbx-intake-month">
+            {{#with intakeMonthList}}
+                {{#each intakeMonthList}}
+                    <option value="{{key}}">{{label}}</option>
+                {{/each}}
+            {{/with}}
+        </select>
+    </div>
+</template>
+<template name="DeliveryModeFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="cbxDeliveryMode">DELIVERY MODE</label>
+        {{#with buttonGroup}}
+            <div class="{{styles.buttonGroup}}">
+                {{#each buttonGroup}}
+                    <button id="{{key}}" class="btn btn-deliveryMode btnActiveGreen {{styles.btnDeliveryMode}}" value="{{key}}">{{label}}</button>
+                {{/each}}
+            </div>
+        {{/with}}
+    </div>
+</template>
+<template name="ProviderFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="txtCollege">PROVIDER (UNIVERSITY/COLLEGE)</label>
+            <input type="text" value="" class="typeahead" name="txtCollege" />
+    </div>
+</template>
+<template name="CategoryFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="cbxCourseCategory">COURSE CATEGORY</label>
+        <select name="cbxCourseCategory" class="cbx-course-category">
+            {{#with List}}
+                {{#each List}}
+                    <option value="{{key}}">{{label}}</option>
+                {{/each}}
+            {{/with}}
+        </select>
+    </div>
+</template>
+<template name="NameFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="txtCourseName">COURSE NAME</label>
+        <input type="text" style="height:30px;" name="txtCourseName" />
+    </div>
+</template>
+<template name="QualificationFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="buttonGroupEduLvl">QUALIFICATION</label>
+        {{#with buttonGroup}}
+            <div class="{{styles.buttonGroup}}">
+                {{#each buttonGroup}}
+                    <button id="{{key}}" class="btn btn-eduLvl btnActiveGreen" value="{{key}}">{{label}}</button>
+                {{/each}}
+            </div>
+        {{/with}}
+    </div>
+</template>
+<template name="LocationFilter">
+    <div class="{{styles.filterContent}} locationInput">
+        <label for="txtLocation">LOCATION - CITY NEAR YOU</label>
+        <input type="text" style="height:30px;" name="txtLocation" />
+    </div>
+</template>
+<template name="CourseDurationFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="slider">COURSE DURATION</label>
+        <div id="slider"></div>
+         <p>Less than : {{slider}}</p>
+    </div>
+</template>
+<template name="RatingFilter">
+    <div class="{{styles.filterContent}}">
+        <label for="ratingStar">UNIVERSITY RATING</label>
+        {{> starsRating id='rating' size=50 class='ratingStar' mutable=true}}
+    </div>
+</template>

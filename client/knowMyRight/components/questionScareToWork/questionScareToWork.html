@@ -1,0 +1,22 @@
+<template name="questionScareToWork">
+  <div >
+    <h1>How do you feel at work most of the time?</h1>
+    <div class="questionRow">
+      <div class="questionDataLeft">
+        <i class="fa fa-meh-o logo-size" aria-hidden="true"></i>
+      </div>
+      <div class="questionDataRight">
+        <div class="btn-group" data-toggle="buttons" style="width:100%">
+        {{#each workFeelList}}
+        <label class="btn btn-success" style="width:100%;margin:0.5em" >
+          <input type="radio" name="workFeel" style="margin-top:-3px;" value="{{key}}" /> {{label}}
+        </label>
+        {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="divNext">
+      <button type="button" class="buttonNextQuestion" id="btnNext">Next</button>
+    </div>
+  </div>
+</template>

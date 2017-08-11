@@ -1,0 +1,40 @@
+<template name="questionPayment">
+  <div>
+    <h1>How much does your employer pay you per month?</h1>
+    <div class="questionRow">
+      <div class="questionDataLeft">
+        <i class="fa fa-money logo-size" aria-hidden="true"></i>
+      </div>
+      <div class="questionDataRight">
+        <div class="btn-group" data-toggle="buttons" style="width:100%">
+        {{#each payList}}
+        <label class="btn btn-success" style="width:100%;margin:0.5em" >
+          <input type="radio" name="monthlySalary" style="margin-top:-3px;" value="{{key}}" /> {{label}}
+        </label> 
+        {{/each}}
+        </div>
+      </div>
+    </div>
+    <hr style="color:#BDBDBD" />
+    <div id="partBQuestion">
+      <h1>Are you able to take and use the money you earned freely?</h1>
+      <div class="questionRow">
+        <div class="questionDataLeft">
+          <i class="fa fa-spinner logo-size" aria-hidden="true"></i>
+        </div>
+        <div class="questionDataRight">
+          <div class="btn-group" data-toggle="buttons" style="width:100%">
+          {{#each yesNoList}}
+          <label class="btn btn-success radio-btn-size" style="width:100%;margin:0.5em" >
+            <input type="radio" name="earnFreely" style="margin-top:-3px;" value="{{key}}" /> {{label}} 
+          </label>
+          {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divNext">
+    <button type="button" class="buttonNextQuestion" id="btnNext">Next</button>
+  </div>
+</template>

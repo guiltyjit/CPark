@@ -1,0 +1,44 @@
+<template name="register">
+    {{#if notLogin}}
+        <form clas="register">
+          <div class="{{styles.topBorder}}">
+          <div class="{{styles.tr}}">
+            <p>By having a profile you can save your preferences and keep track of your inquiry status.</p>
+          </div>
+          <div class="{{styles.tr}}">
+          <div class="{{styles.tdLabel}}">First name: </div><div><input type="text" name="fname"/></div>
+          </div>
+          <div class="{{styles.tr}}">
+              <div class="{{styles.tdLabel}}">Last name: </div><div><input type="text" name="lname"/></div>
+          </div>
+          <div class="{{styles.tr}}">
+          <div class="{{styles.tdLabel}}">Email: </div><div><input type="email" name="email"/></div>
+          </div>
+          <div class="{{styles.tr}}">
+          <div class="{{styles.tdLabel}}">Phone number: </div>
+              <div>
+                  <input type="number" name="phoneNumber"/>
+                  <small class="font-color-light-grey">The last 4 digit of your phone number will be used as password. You can reset your password later.</small>
+              </div>
+          </div>
+            {{> cbxQualificationForSignup}}
+            <div class="{{styles.tr}}"><input type="submit" value="Register" class="{{styles.btnRegister}}"></div>
+          </div>
+        </form>
+    {{/if}}
+</template>
+
+<template name="cbxQualificationForSignup">
+    <div class="{{styles.tr}}">
+      <div class="{{styles.tdLabel}}">Latest Qualification Level: </div>
+      <div>
+        <select name="cbxQualificationForSignup" class="cbx-qualification-for-signup">
+            {{#with List}}
+                {{#each List}}
+                    <option value="{{key}}">{{label}}</option>
+                {{/each}}
+            {{/with}}
+        </select>
+      </div>
+    </div>
+</template>

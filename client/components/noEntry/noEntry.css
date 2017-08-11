@@ -1,0 +1,27 @@
+.sign {
+    box-sizing: border-box;
+    position:relative;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 3px #666;
+    border-radius: 50%;
+    margin-bottom:2em;
+    display: inline-block;
+}
+
+.noEntry {
+    background: #fff;
+    border: solid 5px #fff;
+    background-color: red;
+}
+
+.noEntry:after {
+     content:'';
+     display:block;
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,-50%) ;
+     width:65px;
+     border-top:solid 15px #fff;
+ }

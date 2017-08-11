@@ -1,0 +1,34 @@
+.tr{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 0 15%;
+}
+.tr input,
+.tr select{
+  width: 100%;
+  height: 3.5rem;
+}
+.tdLabel{
+  font-weight: bold;
+  width: 250px;
+  min-width: 80px;
+}
+.tr small{
+  font-size: 14px;
+  line-height: 1.1;
+}
+.right{
+  float: right;
+}
+.topBorder{
+  margin-top: 20px;
+}
+.btnRegister{
+  composes: btn from "../style.css";
+  composes: btn-yellow from "../style.css";
+  composes: redirect-to-add from "../style.css";
+  text-decoration: none;
+  border: 0px;
+  font-size: 14px;
+}

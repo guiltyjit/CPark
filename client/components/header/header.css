@@ -1,0 +1,84 @@
+.headerWrapper {
+    background-color: black;
+}
+
+.topLayerContainer {
+    composes: container from "../../style.css";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.btnSearch{
+  composes: btn from "../../style.css";
+  composes: btn-green from "../../style.css";
+  composes: redirect-to-add from "../../style.css";
+  padding: 7px 15px 7px 15px;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.imgToast{
+    height:120px;
+    width:250px;
+}
+
+.nav {
+    composes: container from "../../style.css";
+    background-color:black;
+    color: #BDBDBD;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #BDBDBD;
+    padding: 20px;
+}
+nav a :hover{
+    color: #BDBDBD !important;
+    padding: 0.9em 0;
+
+}
+
+a{
+    text-align: center;
+}
+
+a:hover{
+    color: #BDBDBD !important;
+    text-decoration: none;
+    border: 1px solid grey;
+}
+
+.advWrapper {
+    composes: container from "../../style.css";
+    background: url("http://cdn2.hubspot.net/hubfs/1915995/bg/blue-bg.png?t=1468484873016") center repeat;
+    text-align: center;
+    color: #09556c;
+}
+.rightCorner{
+    display: flex;
+    margin: auto 0;
+}
+.rightCorner input{
+    height: 40px;
+    margin: 0;
+}
+@media screen and (min-width:850px) {
+    nav {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    nav a:not(:last-child):after {
+        content: "";
+        padding: 0 1rem;
+    }
+}

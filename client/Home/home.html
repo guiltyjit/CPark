@@ -1,0 +1,27 @@
+<template name="home">
+    <div>
+        <div>
+            <!-- <h1><u>Story</u></h1> -->
+            {{>userDetails}} {{>story}}
+        </div>
+        <div id="petitionID">
+            <h1>
+                <u>Knowing your RIGHTs</u>
+            </h1>
+            <p>Many are not aware that their basic human rights are being violated. <br/>
+            Click the link to find out if your employer have fulfilled your basic human needs and rights.
+            </p>
+            <br/>
+            <div class="divNext">
+                <a href="/knowMyRight"><button class="buttonNextQuestion"><i class="fa fa-list" aria-hidden="true"></i> let's go</button></a>
+            </div>
+        </div>
+        <div>
+            <h1>
+                <u>Petition</u>
+            </h1>
+            {{> humanTraffickingInformation}}
+            {{> humanTraffickingForm}}
+        </div>
+    </div>
+</template>

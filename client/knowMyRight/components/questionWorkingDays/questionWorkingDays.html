@@ -1,0 +1,38 @@
+<template name="questionWorkingDays">
+  <div >
+    <h1>How many hours do your work on a usual working day?</h1>
+    <div class="questionRow">
+      <div class="questionDataLeft">
+        <i class="fa fa-hourglass-end logo-size" aria-hidden="true"></i>
+      </div>
+      <div class="questionDataRight">
+        <div class="btn-group" data-toggle="buttons" style="width:100%">
+        {{#each workHourLists}}
+        <label class="btn btn-success" style="width:100%;margin:0.5em" >
+          <input type="radio" name="workhour" style="margin-top:-3px;" value="{{key}}" /> {{label}}
+        </label>
+        {{/each}}
+        </div>
+      </div>
+    </div>
+    <hr style="color:#BDBDBD"/>
+    <h1>Do you have off or rest day every week?</h1>
+    <div class="questionRow">
+      <div class="questionDataLeft">
+        <i class="fa fa-clock-o logo-size" aria-hidden="true"></i>
+      </div>
+      <div class="questionDataRight">
+        <div class="btn-group" data-toggle="buttons" style="width:100%">
+        {{#each workRestLists}}
+        <label class="btn btn-success" style="width:100%;margin:0.5em" >
+          <input type="radio" name="restDay" style="margin-top:-3px;" value="{{key}}" /> {{label}}
+        </label>
+        {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="divNext">
+      <button type="button" class="buttonNextQuestion" id="btnNext">Next</button>
+    </div>
+  </div>
+</template>
