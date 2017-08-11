@@ -99,18 +99,90 @@ export const DATE_LIST = [
   { key: "20171117", label: "17/11/2017" }
 ]
 
+export const MOCK_PROFIT_RENT_DATA = [
+  {
+    month: "July",
+    total: "RM 150.00",
+    netProfit: "RM 132.00",
+    management: "RM 18.00",
+    occupiedHistory: [{
+      carPlate: 'W9624M',
+      rentOwnerName: 'Chan Jun Kit',
+      unit: 'A-11-03',
+      date: {
+        from: '01/07/2017',
+        to: '31/07/2017'
+      },
+      totalCharge: 'RM 150.00',
+      parkingSlot: 'A1102'
+    }]
+  },
+  {
+    month: "June",
+    total: "RM 130.00",
+    netProfit: "RM 114.40",
+    management: "RM 15.60",
+    occupiedHistory: [
+      {
+        carPlate: 'WWE9624',
+        rentOwnerName: 'Charles',
+        unit: 'A-11-03',
+        date: {
+          from: '01/06/2017',
+          to: '11/06/2017'
+        },
+        totalCharge: 'RM 55.00',
+        parkingSlot: 'A1102'
+      },
+      {
+        carPlate: 'W9624M',
+        rentOwnerName: 'Chan Jun Kit',
+        unit: 'A-11-03',
+        date: {
+          from: '15/06/2017',
+          to: '30/06/2017'
+        },
+        totalCharge: 'RM 75.00',
+        parkingSlot: 'A1102'
+      }
+    ]
+  }
+]
+
+export const MOCK_CURRENT_RENT_DATA = [
+  {
+    date: {
+      from: '01/08/2017',
+      to: '31/08/2017'
+    },
+    parkingSlot: 'A1102'
+  },
+  {
+    date: {
+      from: '01/09/2017',
+      to: '30/09/2017'
+    },
+    parkingSlot: 'A1102'
+  }
+]
+
+export const RENT_LIST_TAB_OPTION = [
+  { key: "RENT", label: "Rent Out" },
+  { key: "PROFIT", label: "Profits" },
+]
+
 export const NATIONALITY_LIST = [
-  { key: "MY", label: "Malaysia", images:"/images/human-traffic-hack/flag/malaysia.svg" },
-  { key: "ID", label: "India", images:"/images/human-traffic-hack/flag/india.png" },
-  { key: "CH", label: "China", images:"/images/human-traffic-hack/flag/china.jpg" },
-  { key: "GH", label: "Ghana", images:"/images/human-traffic-hack/flag/Ghana.jpg" },
-  { key: "UG", label: "Uganda", images:"/images/human-traffic-hack/flag/Uganda.png" },
-  { key: "NE", label: "Nepal", images:"/images/human-traffic-hack/flag/nepal.gif" },
-  { key: "SL", label: "Sri Lanka", images:"/images/human-traffic-hack/flag/Sri Lanka.jpg" },
-  { key: "PK", label: "Pakistan", images:"/images/human-traffic-hack/flag/pakistan.GIF" },
-  { key: "HA", label: "Haiti", images:"/images/human-traffic-hack/flag/haiti.gif" },
-  { key: "BZ", label: "Brazil", images:"/images/human-traffic-hack/flag/Brazil.png" },
-  { key: "BG", label: "Bangladesh", images:"/images/human-traffic-hack/flag/Bangladesh.gif" }
+  { key: "MY", label: "Malaysia", images: "/images/human-traffic-hack/flag/malaysia.svg" },
+  { key: "ID", label: "India", images: "/images/human-traffic-hack/flag/india.png" },
+  { key: "CH", label: "China", images: "/images/human-traffic-hack/flag/china.jpg" },
+  { key: "GH", label: "Ghana", images: "/images/human-traffic-hack/flag/Ghana.jpg" },
+  { key: "UG", label: "Uganda", images: "/images/human-traffic-hack/flag/Uganda.png" },
+  { key: "NE", label: "Nepal", images: "/images/human-traffic-hack/flag/nepal.gif" },
+  { key: "SL", label: "Sri Lanka", images: "/images/human-traffic-hack/flag/Sri Lanka.jpg" },
+  { key: "PK", label: "Pakistan", images: "/images/human-traffic-hack/flag/pakistan.GIF" },
+  { key: "HA", label: "Haiti", images: "/images/human-traffic-hack/flag/haiti.gif" },
+  { key: "BZ", label: "Brazil", images: "/images/human-traffic-hack/flag/Brazil.png" },
+  { key: "BG", label: "Bangladesh", images: "/images/human-traffic-hack/flag/Bangladesh.gif" }
 ]
 
 export const YES_NO_LIST = [

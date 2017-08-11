@@ -1,41 +1,29 @@
-import styles from './rentPage.css';
+import styles from './rentList.css';
 import {
-  RENT_SELECTION_LIST,
-  RENT_TYPE_SELECTION_LIST,
-  TIME_LIST,
-  DATE_LIST
+  MOCK_CURRENT_RENT_DATA,
+  MOCK_PROFIT_RENT_DATA,
+  RENT_LIST_TAB_OPTION
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
-  Template.rentPage.helpers({
+  Template.rentList.helpers({
     styles: styles,
-    rentSelectionList: function () {
-      return RENT_SELECTION_LIST
+    rentListTabOption: function () {
+      return RENT_LIST_TAB_OPTION
     },
-    rentTypeSelectionList: function () {
-      return RENT_TYPE_SELECTION_LIST;
+    mockProfitRentData: function(){
+      return MOCK_PROFIT_RENT_DATA
     },
-    timeList: function () {
-      return TIME_LIST;
-    },
-    dateList: function () {
-      return DATE_LIST;
-    },
-    rentLists: function () {
-      if (Session.get("rent").length > 0) {
-        return Session.get("rent");
-      }
-      else {
-        return [];
-      }
+    mockCurrentRentData: function(){
+      return MOCK_CURRENT_RENT_DATA
     }
   });
 
-  Template.rentPage.onRendered(function () {
+  Template.rentList.onRendered(function () {
     Session.set("rent", []);
   });
 
-  Template.rentPage.events({
+  Template.rentList.events({
     'mouseenter .addHoverEvent': function (evt, res) {
       $(evt.currentTarget).removeClass('fa-plus-square');
       $(evt.currentTarget).addClass('fa-plus-square-o');

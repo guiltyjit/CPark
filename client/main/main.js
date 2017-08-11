@@ -37,6 +37,12 @@ Router.route('/map', function () {
   this.render('footer', {to: 'footer'});
 });
 
+Router.route('/rentList', function () {
+  this.render('header', {to: 'header'});
+  this.render('rentList');
+  this.render('footer', {to: 'footer'});
+});
+
 Router.route('/rentPage', function () {
   this.render('header', {to: 'header'});
   this.render('rentPage');
