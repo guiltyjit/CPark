@@ -1,0 +1,75 @@
+<template name="rentPage">
+  <h1>
+    Rent Page
+  </h1>
+  <form name="course">
+    <div class="{{styles.divContainer}}">
+      <div class="{{styles.headTitle}}">Availability For Rent</div>
+    </div>
+    <div class="{{styles.divContainer}}">
+      <div class="{{styles.headTitle}}">Rent out on</div>
+      <div>
+        {{#each rentTypeSelectionList}}
+        <button type="button" value="{{value}}" name="rentTypeOption">{{label}}</button>
+        {{/each}}
+      </div>
+      <div style="display:none" id="divRentSpecify">
+        <div>
+          <div class="{{styles.divContainerRow}}">
+            Availability Date
+            <div style="margin-left:10px;">
+              <select class="{{styles.dateListLevelDropDown}}" name="dateList"
+              id="dateList">
+                {{#each dateList}}
+                    <option value="{{key}}">{{label}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+          <div class="{{styles.divContainerRow}}">
+            Availability Time
+            <div class="{{styles.divContainerRow}}" style="margin-left:10px;margin-right:10px;">
+              From
+              <select class="{{styles.timeDropDown}}" name="timeFrom"
+               id="timeFrom">
+                {{#each timeList}}
+                    <option value="{{key}}">{{label}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="{{styles.divContainerRow}}" style="margin-left:10px;margin-right:10px;">
+              To
+              <select class="{{styles.timeDropDown}}" name="timeTo"
+               id="timeTo">
+                {{#each timeList}}
+                    <option value="{{key}}">{{label}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="{{styles.divAddButton}}"><i class="fa fa-plus-square {{styles.addButton}} addHoverEvent" aria-hidden="true" id="btnAddRent"></i></div>
+          </div>
+        </div>
+        {{#each rentLists}}
+        <div class="{{styles.divContainerRow}}">
+          <div class="{{styles.divListItem}}">
+            Date : {{date}} <br/>
+            Time : {{timeFrom}} - {{timeTo}}
+          </div>
+          <div class="{{styles.divAddButton}}"><i class="fa fa-minus-square {{styles.removeButton}} removeHoverEvent" aria-hidden="true" name="btnRemoveRent"
+              id="{{id}}"></i></div>
+        </div>
+        {{/each}}
+      </div>
+      <div style="display:none" id="divRentRange">
+        {{#each rentSelectionList}}
+        <div class="{{styles.tdRadioButton}}">
+          <input type="radio" name="rent" style="margin-top:-3px;" value="{{value}}" /> {{label}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="{{styles.divContainer}}">
+      <input type="submit" value="Save" />
+    </div>
+  </form>
+</template>

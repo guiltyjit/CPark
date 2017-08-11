@@ -37,43 +37,15 @@ Router.route('/map', function () {
   this.render('footer', {to: 'footer'});
 });
 
-Router.route('/map/cenang', function () {
+Router.route('/rentPage', function () {
   this.render('header', {to: 'header'});
-  this.render('cenangBeachViewPage');
-  this.render('footer', {to: 'footer'});
-});
-
-Router.route('/safetyLocationPage', function () {
-  this.render('header', {to: 'header'});
-  this.render('safetyLocationPage');
-  this.render('footer', {to: 'footer'});
-});
-
-Router.route('/safetyInformationPage', function () {
-  this.render('header', {to: 'header'});
-  this.render('safetyInformationPage');
-  this.render('footer', {to: 'footer'});
-});
-
-Router.route('/map/cherating', function () {
-  this.render('header', {to: 'header'});
-  this.render('cheratingBeachViewPage');
+  this.render('rentPage');
   this.render('footer', {to: 'footer'});
 });
 
 Router.route('home', function () {
   this.render('header', {to: 'header'});
   this.render('home');
-  this.render('footer', {to: 'footer'});
-});
-Router.route('safty', function () {
-  this.render('header', {to: 'header'});
-  this.render('fullDetails');
-  this.render('footer', {to: 'footer'});
-});
-Router.route('locations', function () {
-  this.render('header', {to: 'header'});
-  this.render('adminDetailPage');
   this.render('footer', {to: 'footer'});
 });
 
