@@ -4,6 +4,234 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css";
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Put padding on the inside of elements */
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Our base font-size */
+    line-height: 1.75; /* Line height written in number is multiple font-size. It have dynamic effect when font-size change */
+    font-weight: 300; /* Use the included weight */
+    color: #332F21; /* Don't use black it's too harsh */
+
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+
+    min-height: 100vh; /* Force verticle centering since the content won't always be taller than the viewport */
+    /*padding: 2rem; !* Using rem values as they don't cascade like em units and are not fixed units like pixels *!*/
+
+    background-image: linear-gradient(rgba(8,198,242, 0.7), rgba(240, 247, 124, 0.6)), url('../images/1.png'); /* Multiple Background images, semi-transparent gradient used as a fallback for Edge */
+    background-position: center center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.container>article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-header {
+    background-color: aqua;
+}
+
+.container-header h1 {
+    font-size: 1.4rem;
+}
+
+.wrapper {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 9px;
+}
+
+.container-header .wrapper {
+    align-items: center;
+}
+
+.container-body {
+    flex: 1 0 auto;
+}
+
+.container-body .wrapper {
+    flex-direction: column;
+}
+
+aside {
+    opacity: 0;
+    max-height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+aside.is-active {
+    opacity: 1;
+}
+
+.menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    cursor: pointer;
+
+    transition: background-color 500ms ease-in-out;
+}
+
+.menu-button.js-menu-close {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 9px 9px 0 0;
+}
+
+.menu-icon {
+    position:relative;
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.menu-icon span {
+    position: absolute;
+    height: 0.125rem;
+    width: 100%;
+    background-color: #332F21;
+    transition: background-color 500ms ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0.0625rem; /* fall back if browser not support calc() */
+}
+
+.menu-icon span:nth-child(2) {
+    top: 0.625rem;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 1.25rem;
+}
+
+/* full screen menu */
+.fullScreen-menu-container {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    top: 12.5rem;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(255,255,255,0.95);
+    transition: top 500ms ease-in, opacity 300ms ease-in;
+}
+
+.fullScreen-menu-container.is-open {
+    opacity: 1;
+    top: 0;
+    pointer-events: auto;
+}
+
+.menu-icon.is-active span:nth-child(1) {
+    opacity: 0;
+}
+
+.menu-icon.is-active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu-icon.is-active span:nth-child(3) {
+    top: 0.625rem;
+    transform: rotate(-45deg);
+}
+
+.fullScreen-menu {
+    text-align: center;
+    max-width: 62rem;
+    padding: 6rem 2rem 4rem;
+    width: 100%;
+}
+
+.fullScreen-menu__nav {
+    margin: 3rem 0;
+}
+
+.fullScreen-menu__nav ul{
+    padding: 0;
+}
+
+.fullScreen-menu__nav a {
+    display: block;
+    font-size: 1.4rem;
+    padding: 1rem;
+    color: #A2A2A2;
+    text-decoration: none;
+    transition: color 300ms ease-in;
+}
+
+.card {
+    background-color: #fdfdfd;
+    width: 100%;
+}
+
+.card>div,
+.card>span,
+.card>p{
+    padding: 0 9px;
+}
+
+.topMargin {
+    margin-top: 9px;
+}
+
+.colum-max-width{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.btn-rent-out {
+    border: 1px solid #a2a2a2;
+}
+
+@media only screen and (min-width: 46rem) {
+    /* When the viewport is large enough */
+    .fullScreen-menu__nav {
+        margin: 4rem 0;
+    }
+
+    .fullScreen-menu__nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 *:global {
     padding: 0;
