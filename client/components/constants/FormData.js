@@ -173,7 +173,7 @@ export const RENT_LIST_TAB_OPTION = [
   { key: "PROFIT", label: "Profits" },
 ]
 
-export const GUESS_LIST = [
+export const GUEST_LIST = [
   { id:1, name: "Kenny", phoneNumber: "01683739900", carPlate: "BMW8372", ETA: "8:00 AM", date: '2017-12-09', isBooked: false },
   { id:2, name: "Ben", phoneNumber: "010-84329722", carPlate: "WMQ3827", ETA: "5:00 PM", date: '2017-12-09', isBooked: true }
 ]

@@ -43,9 +43,15 @@ Router.route('/rentPage', function () {
   this.render('footer', {to: 'footer'});
 });
 
-Router.route('/guessListPage', function () {
+Router.route('/guestListPage', function () {
   this.render('header', {to: 'header'});
-  this.render('guessListPage');
+  this.render('guestListPage');
+  this.render('footer', {to: 'footer'});
+});
+
+Router.route('/guestDetail', function () {
+  this.render('header', {to: 'header'});
+  this.render('guestDetail');
   this.render('footer', {to: 'footer'});
 });
 

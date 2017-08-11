@@ -1,21 +1,21 @@
-import styles from './guessListPage.css';
+import styles from './guestListPage.css';
 import {
-  GUESS_LIST
+  GUESt_LIST
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
-  Template.guessListPage.helpers({
+  Template.guestListPage.helpers({
     styles: styles,
-    guessList: function () {
-      return GUESS_LIST
+    guestList: function () {
+      return GUEST_LIST
     }
   });
 
-  Template.guessListPage.onRendered(function () {
+  Template.guestListPage.onRendered(function () {
     Session.set("rent", []);
   });
 
-  Template.guessListPage.events({
+  Template.guestListPage.events({
     'click #btnAddRent': function (evt, res) {
       function getPartnerInformation(key, id) {
         var returnValue = {};
