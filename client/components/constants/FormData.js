@@ -173,6 +173,16 @@ export const RENT_LIST_TAB_OPTION = [
   { key: "PROFIT", label: "Profits" },
 ]
 
+export const GUESS_LIST = [
+  { id:1, name: "Kenny", phoneNumber: "01683739900", carPlate: "BMW8372", ETA: "8:00 AM", date: '2017-12-09', isBooked: false },
+  { id:2, name: "Ben", phoneNumber: "010-84329722", carPlate: "WMQ3827", ETA: "5:00 PM", date: '2017-12-09', isBooked: true }
+]
+
+export const FAMILY_LIST = [
+  { name: "Kent", phoneNumber: "018764793832", carPlate: "APW4927", isBooked: true },
+  { name: "Jerome", phoneNumber: "01793878374", carPlate: "QAA1989C", isBooked: false }
+]
+
 export const NATIONALITY_LIST = [
   { key: "MY", label: "Malaysia", images: "/images/human-traffic-hack/flag/malaysia.svg" },
   { key: "ID", label: "India", images: "/images/human-traffic-hack/flag/india.png" },

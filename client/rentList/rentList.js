@@ -114,62 +114,6 @@ if (Meteor.isClient) {
         $("#divRentCurrent").css("display", "inline");
         $("#divRentProfit").css("display", "none");
       }
-    },
-    'submit form': function (evt, res) {
-      event.preventDefault();
-      // var selected = res.findAll("input[type=checkbox]:checked");
-      // var intake = [];
-      // var studyMode = [];
-      // var deliveryMode = [];
-
-      // $(selected).each(function (index, object) {
-      //   switch (object.name) {
-      //     case "deliveryMode":
-      //       deliveryMode.push({ "value": object.value, "text": DELIVERY_MODE_MAP[object.value] });
-      //       break;
-      //     case "studyMode":
-      //       studyMode.push({ "value": object.value, "text": STUDY_MODE_MAP[object.value] });
-      //       break;
-      //     case "intake":
-      //       intake.push({ "month": object.value, "text": NUM_TO_MONTH_MAP[object.value] });
-      //       break;
-      //     default:
-      //       break;
-      //   }
-      // });
-
-      // var saveCourseInfromation = {};
-
-      // saveCourseInfromation.course = $('[name=txtCourse]').val();
-      // saveCourseInfromation.courseImgUrl = $('[name=txtCourseImageUrl]').val();
-      // saveCourseInfromation.qualification = $('[name=txtQualification]').val();
-      // saveCourseInfromation.courseDurationMax = $('[name=txtMaxCourseDuration]').val();
-      // saveCourseInfromation.courseDurationMin = $('[name=txtMinCourseDuration]').val();
-
-      // saveCourseInfromation.deliveryMode = deliveryMode;
-      // saveCourseInfromation.studyMode = studyMode;
-      // saveCourseInfromation.intake = intake;
-
-      // saveCourseInfromation.qualificationLevel = $('[name=qualificationLevel]').val();
-      // saveCourseInfromation.qualificationCategory = $('[name=qualificationCategory]').val();
-      // saveCourseInfromation.provider = $('[name=provider]').val();
-      // saveCourseInfromation.providerLabel = $("[name=provider] option:selected").text();
-      // saveCourseInfromation.location = Session.get("location");
-      // saveCourseInfromation.keyTopic = Session.get("keyTopic");
-      // saveCourseInfromation.careerOutcomes = Session.get("careerOutcomes");
-      // saveCourseInfromation.preRequisites = Session.get("preRequisites");
-      // saveCourseInfromation.partner = Session.get("partner");
-
-      // Meteor.call("insertCourse", saveCourseInfromation, function (error, results) {
-      //   if (error) {
-      //     console.log(error);
-      //   }
-      //   else {
-      //     console.log("data been save");
-      //     alert("data been save");
-      //   }
-      // });
-
     }
   });
 }

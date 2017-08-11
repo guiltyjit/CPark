@@ -31,12 +31,6 @@ Router.route('ref', function () {
   this.render('footer', {to: 'footer'});
 });
 
-Router.route('/map', function () {
-  this.render('header', {to: 'header'});
-  this.render('home');
-  this.render('footer', {to: 'footer'});
-});
-
 Router.route('/rentList', function () {
   this.render('header', {to: 'header'});
   this.render('rentList');
@@ -49,15 +43,9 @@ Router.route('/rentPage', function () {
   this.render('footer', {to: 'footer'});
 });
 
-Router.route('home', function () {
+Router.route('/guessListPage', function () {
   this.render('header', {to: 'header'});
-  this.render('home');
-  this.render('footer', {to: 'footer'});
-});
-
-Router.route('knowMyRight', function () {
-  this.render('header', {to: 'header'});
-  this.render('knowMyRight');
+  this.render('guessListPage');
   this.render('footer', {to: 'footer'});
 });
 
