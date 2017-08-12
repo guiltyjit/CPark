@@ -1,0 +1,231 @@
+[
+
+	{
+	"owner":"MR.TAN "
+    "month": "July",
+   "year": "2017",
+    "total": "150.00",
+    "netProfit": "132.00",
+    "managementCharges": "18.00",
+    "rentOutHistory": [{
+      "carPlate": 'W9624M',
+      "tenantName": 'Chan Jun Kit',
+      "date": {
+        "from": '01/07/2017',
+        "to": '31/07/2017'
+      },
+      "totalCharge": '150.00',
+      "parkingSlotUnitNo": 'A1102'
+    }]
+  },
+  {
+  "owner":"MR.Chan "
+    "month": "June",
+    "year": "2017",
+    "total": "130.00",
+    "netProfit": "114.40",
+    "managementCharges": "15.60",
+    "rentOutHistory": [
+      {
+        "carPlate": 'WWE9624',
+        "tenantName": 'Charles',
+        "date": {
+          "from": '01/06/2017',
+          "to": '11/06/2017'
+        },
+        "totalCharge": '55.00',
+        "parkingSlotUnitNo": 'A1108'
+      },
+      {
+        "carPlate": 'W9624M',
+        "tenantName": 'john',
+        "date": {
+          "from": '15/06/2017',
+          "to": '30/06/2017'
+        },
+        "totalCharge": '75.00',
+        "parkingSlotUnitNo": 'A1102'
+      }
+    ]
+  },
+  {
+  "owner":"MR.Samsung "
+    "month": "August",
+    "year": "2017",
+    "total": "180.00",
+    "netProfit": "145.00",
+    "managementCharges": "35.00",
+    "rentOutHistory": [
+      {
+        "carPlate": 'KL621',
+        "tenantName": 'Peter',
+        "date": {
+          "from": '01/06/2017',
+          "to": '14/06/2017'
+        },
+        "totalCharge": '57.00',
+        "parkingSlotUnitNo": 'B1108'
+      },
+      {
+        "carPlate": 'CCG44M',
+        "tenantName": 'Gill',
+        "date": {
+          "from": '13/06/2017',
+          "to": '24/06/2017'
+        },
+        "totalCharge": '40.00',
+        "parkingSlotUnitNo": 'B1109'
+      }
+    ]
+  },
+  {
+  "owner":"MR.Roger "
+    "month": "June",
+    "year": "2017",
+    "total": "80.00",
+    "netProfit": "60.40",
+    "managementCharges": "19.60",
+    "rentOutHistory": [
+      {
+        "carPlate": 'SSD89U',
+        "tenantName": 'Federer',
+        "date": {
+          "from": '01/06/2017',
+          "to": '06/06/2017'
+        },
+        "totalCharge": '26.00',
+        "parkingSlotUnitNo": 'C1109'
+      },
+      {
+        "carPlate": 'KLU65E',
+        "tenantName": 'Nadal',
+        "date": {
+          "from": '12/06/2017',
+          "to": '30/06/2017'
+        },
+        "totalCharge": '64.00',
+        "parkingSlotUnitNo": 'C1108'
+      }
+    ]
+  },
+  {
+  "owner":"MR.Lee "
+    "month": "July",
+    "year": "2017",
+    "total": "150.00",
+    "netProfit": "124.40",
+    "managementCharges": "25.60",
+    "rentOutHistory": [
+      {
+        "carPlate": 'KLU28I',
+        "tenantName": 'Jin',
+        "date": {
+          "from": '03/07/2017',
+          "to": '14/07/2017'
+        },
+        "totalCharge": '55.00',
+        "parkingSlotUnitNo": 'D1102'
+      },
+      {
+        "carPlate": 'JUI86E',
+        "tenantName": 'Chin',
+        "date": {
+          "from": '15/07/2017',
+          "to": '30/07/2017'
+        },
+        "totalCharge": '75.00',
+        "parkingSlotUnitNo": 'D1102'
+      }
+    ]
+  },
+  {
+  "owner":"MR.James "
+    "month": "July",
+    "year": "2017",
+    "total": "150.00",
+    "netProfit": "124.40",
+    "managementCharges": "25.60",
+    "rentOutHistory": [
+      {
+        "carPlate": 'AGT65S',
+        "tenantName": 'Gracey',
+        "date": {
+          "from": '01/07/2017',
+          "to": '11/07/2017'
+        },
+        "totalCharge": '65.00',
+        "parkingSlotUnitNo": 'F1102'
+      },
+      {
+        "carPlate": 'ZX34D2',
+        "tenantName": 'Chin Chang',
+        "date": {
+          "from": '15/07/2017',
+          "to": '30/07/2017'
+        },
+        "totalCharge": '85.00',
+        "parkingSlotUnitNo": 'F1103'
+      }
+    ]
+  },
+  {
+  "owner":"MR.Bruce "
+    "month": "June",
+    "year": "2017",
+    "total": "150.00",
+    "netProfit": "124.40",
+    "managementCharges": "25.60",
+    "rentOutHistory": [
+      {
+        "carPlate": 'AME45R',
+        "tenantName": 'Leena',
+        "date": {
+          "from": '04/06/2017',
+          "to": '18/06/2017'
+        },
+        "totalCharge": '75.00',
+        "parkingSlotUnitNo": 'K1102'
+      },
+      {
+        "carPlate": 'HGT56D',
+        "tenantName": 'Hafidz',
+        "date": {
+          "from": '19/06/2017',
+          "to": '30/06/2017'
+        },
+        "totalCharge": '75.00',
+        "parkingSlotUnitNo": 'K1102'
+      }
+    ]
+  },
+  {
+  "owner":"MR.Joel "
+    "month": "July",
+    "year": "2017",
+    "total": "130.00",
+    "netProfit": "114.40",
+    "managementCharges": "15.60",
+    "rentOutHistory": [
+      {
+        "carPlate": 'KLD48Y',
+        "tenantName": 'Arun',
+        "date": {
+          "from": '01/07/2017',
+          "to": '11/07/2017'
+        },
+        "totalCharge": '55.00',
+        "parkingSlotUnitNo": 'N1106'
+      },
+      {
+        "carPlate": 'DFE32Q',
+        "tenantName": 'Kitberg',
+        "date": {
+          "from": '15/07/2017',
+          "to": '30/07/2017'
+        },
+        "totalCharge": '75.00',
+        "parkingSlotUnitNo": 'N1107'
+      }
+    ]
+  }
+]
