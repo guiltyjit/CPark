@@ -1,0 +1,46 @@
+<template name="historyListPage">
+  <h1>
+    History Page
+  </h1>
+  <form name="historyListPage">
+    <div class="{{styles.divContainer}}">
+      <div>
+        {{#with personalDetail}}
+        <div class="{{styles.divContainerRow}}">
+          <div class="{{styles.divTitleItem}}">
+            <h3>{{name}}</h3>
+          </div>
+          <div class="{{styles.divTitleItem}}">
+            <h3>{{carPlate}}</h3>
+          </div>
+        </div>
+        {{/with}} {{#each historyList}}
+        <div style="border:1px solid black">
+          <div class="{{styles.trGlance}}">
+            <div class="{{styles.tdGlanceLabel}}">
+              <div><i class="fa fa-sign-in" aria-hidden="true" style="font-size: 40px;vertical-align: middle;padding: 0px 30px;"></i></div>
+            </div>
+            <div class="{{styles.tdGlanceText}}">
+              <div>{{in.date}}</div>
+              <div>{{in.time}}</div>
+            </div>
+          </div>
+          {{#if out}}
+          <hr color="#004D40" style="margin:0px"/>
+          <div class="{{styles.trGlance}}">
+            <div class="{{styles.tdGlanceLabel}}">
+              <div><i class="fa fa-sign-out" aria-hidden="true" style="font-size: 40px;vertical-align: middle;padding: 0px 30px;"></i></div>
+            </div>
+            <div class="{{styles.tdGlanceText}}">
+              <div>{{out.date}}</div>
+              <div>{{out.time}}</div>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+
+        {{/each}}
+      </div>
+    </div>
+  </form>
+</template>

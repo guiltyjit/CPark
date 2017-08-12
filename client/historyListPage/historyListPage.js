@@ -1,21 +1,27 @@
-import styles from './guestListPage.css';
+import styles from './historyListPage.css';
 import {
-  GUEST_LIST
+  HISTORY_LIST
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
-  Template.guestListPage.helpers({
+  Template.historyListPage.helpers({
     styles: styles,
-    guestList: function () {
-      return GUEST_LIST
+    historyList: function () {
+      return HISTORY_LIST.history
+    },
+    personalDetail:function(){
+      return {
+        name:'Tan Kent',
+        carPlate:'W7634R'
+      }
     }
   });
 
-  Template.guestListPage.onRendered(function () {
+  Template.historyListPage.onRendered(function () {
     Session.set("rent", []);
   });
 
-  Template.guestListPage.events({
+  Template.historyListPage.events({
     'click #btnAddRent': function (evt, res) {
       function getPartnerInformation(key, id) {
         var returnValue = {};
