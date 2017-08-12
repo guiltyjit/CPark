@@ -19,6 +19,7 @@ if (Meteor.isClient) {
 
   Template.historyListPage.onRendered(function () {
     Session.set("rent", []);
+    Session.set('title', 'History');
   });
 
   Template.historyListPage.events({

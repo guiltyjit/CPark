@@ -110,7 +110,7 @@ textarea{
 }
 .card{
   background-color: #F5F5F5;
-  border: 1px solid #212121;
+  padding-bottom: 9px;
 }
 .divTitleItem{
   margin: 10px 30px;
@@ -123,7 +123,22 @@ textarea{
 }
 .addNewBtn{
     width: 100%;
-    color: #212121;
-    background-color: #EEEEEE;
+    color: #fff;
+    background-color: #428d90;
     padding: 10px;
+}
+
+.btnCancel{
+  margin-left: 27px;
+}
+
+.btnDelete {
+    background-color: #8e8e8e;
+    color: #fff;
+    margin-left: 9px;
+}
+
+.fontNormal {
+  font-size: 1.9rem;
+  font-weight: 400;
 }

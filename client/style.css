@@ -227,6 +227,7 @@ aside.is-active {
     color: #ffffff;
     font-size: 1.6rem;
     padding: 9px 18px;
+    cursor: pointer;
 }
 
 :global button.isActive{

@@ -1,25 +1,29 @@
 <template name="familyDetail">
-    <form clas="familyDetail">
-        <div class="{{styles.topBorder}}">
-            <div class="{{styles.tr}}">
-                <div class="{{styles.tdLabel}}">Name: </div>
-                <div><input type="text" name="name" /></div>
-            </div>
-            <div class="{{styles.tr}}">
-                <div class="{{styles.tdLabel}}">Phone number: </div>
-                <div>
-                    <input type="number" name="phoneNumber" />
+    <section class="container-body">
+        <div class="wrapper">
+            <form clas="familyDetail">
+                <div class="{{styles.topBorder}}">
+                    <div class="{{styles.tr}}">
+                        <div class="{{styles.tdLabel}}">Name: </div>
+                        <div><input type="text" name="name" /></div>
+                    </div>
+                    <div class="{{styles.tr}}">
+                        <div class="{{styles.tdLabel}}">Phone number: </div>
+                        <div>
+                            <input type="number" name="phoneNumber" />
+                        </div>
+                    </div>
+                    <div class="{{styles.tr}}">
+                        <div class="{{styles.tdLabel}}">Car Plate: </div>
+                        <div>
+                            <input type="text" name="carPlate" />
+                        </div>
+                    </div>
+                    <div class="{{styles.tr}}">
+                        <button id="btnSubmit" type="button" class="{{styles.addNewBtn}}">Register</button>
+                    </div>
                 </div>
-            </div>
-            <div class="{{styles.tr}}">
-                <div class="{{styles.tdLabel}}">Car Plate: </div>
-                <div>
-                    <input type="text" name="carPlate" />
-                </div>
-            </div>
-            <div class="{{styles.tr}}">
-                <button id="btnSubmit" type="button" class="{{styles.addNewBtn}}">Register</button>
-            </div>
+            </form>
         </div>
-    </form>
+    </section>
 </template>

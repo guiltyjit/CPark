@@ -1,28 +1,29 @@
 <template name="familyListPage">
-  <h1>
-    Family Page
-  </h1>
-  <div class="{{styles.divContainer}}">
-    <div>
-      {{#each familyList}}
-      <div class="{{styles.card}}">
-        <div class="{{styles.divContainerRow}}">
-          <div class="{{styles.divTitleItem}}">
-            <h3>{{name}}</h3>
-          </div>
-          <div class="{{styles.divTitleItem}}">
-            <h3>{{carPlate}}</h3>
-          </div>
+      <section class="container-body">
+        <div class="wrapper">
+            <div class="card topMargin">
+              <div class="{{styles.divContainer}} bottomMargin">
+                {{#each familyList}}
+                <div class="{{styles.card}} topMargin">
+                  <div class="{{styles.divContainerRow}} {{styles.fontNormal}}">
+                    <div class="{{styles.divTitleItem}}">
+                      <span>{{name}}</span>
+                    </div>
+                    <div class="{{styles.divTitleItem}}">
+                      <span>{{carPlate}}</span>
+                    </div>
+                  </div>
+                  <div class="{{styles.divContainerRow}} {{styles.column}} topMargin">
+                    <button id="btnCancelBooking" type="button" class="{{styles.btnCancel}}">Edit</button>
+                    <button id="btnCancelBooking" type="button" class="{{styles.btnCancel}} {{styles.btnDelete}}">Delete</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+            <div class="{{styles.divContainer}} topMargin">
+              <button id="btnNewFamily" type="button" class="{{styles.addNewBtn}}">Add Family Member</button>
+            </div>
         </div>
-        <div class="{{styles.divContainerRow}}">
-          <button id="btnCancelBooking" type="button">Edit</button>
-          <button id="btnCancelBooking" type="button">Delete</button>
-        </div>
-      </div>
-      {{/each}}
-    </div>
-  </div>
-  <div class="{{styles.divContainer}}">
-    <button id="btnNewFamily" type="button" class="{{styles.addNewBtn}}">Add Family Member</button>
-  </div>
+    </section>
 </template>

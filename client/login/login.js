@@ -11,4 +11,8 @@ if (Meteor.isClient) {
             Router.go("ownerDetails");
         }
     });
+
+     Template.login.onRendered(function() {
+        Session.set('title', 'Login');
+    });
 }

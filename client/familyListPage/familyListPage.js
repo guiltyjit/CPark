@@ -13,6 +13,7 @@ if (Meteor.isClient) {
 
   Template.familyListPage.onRendered(function () {
     Session.set("rent", []);
+    Session.set('title', 'Family List');
   });
 
   Template.familyListPage.events({
