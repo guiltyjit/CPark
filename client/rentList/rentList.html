@@ -1,47 +1,50 @@
 <template name="rentList">
-  <h1>
-    Rent List
-  </h1>
-  <div class="{{styles.divContainer}}">
-    <div class="{{styles.headTitle}}">Rent out on</div>
-    <div>
-      {{#each rentListTabOption}}
-      <button type="button" value="{{key}}" name="rentListDisplay">{{label}}</button> {{/each}}
-    </div>
-    <div style="display:inline" id="divRentCurrent">
-      {{#each mockCurrentRentData}}
-      <div class="{{styles.divContainerRow}}">
-        <div class="{{styles.divListItem}}">
-          Parking Slot : {{parkingSlot}} <br/> Date : {{date.from}} - {{date.to}}
+  <section class="container-body">
+        <div class="wrapper">
+            <div class="card topMargin">
+              <div class="{{styles.divContainer}}">
+                <div class="{{styles.headTitle}}">Rent out on</div>
+                <div>
+                  {{#each rentListTabOption}}
+                  <button type="button" value="{{key}}" name="rentListDisplay">{{label}}</button> {{/each}}
+                </div>
+                <div style="display:inline" id="divRentCurrent">
+                  {{#each mockCurrentRentData}}
+                  <div class="{{styles.divContainerRow}}">
+                    <div class="{{styles.divListItem}}">
+                      Parking Slot : {{parkingSlot}} <br/> Date : {{date.from}} - {{date.to}}
+                    </div>
+                  </div>
+                  {{/each}}
+                </div>
+                <div style="display:none" id="divRentProfit">
+                  {{#each mockProfitRentData}}
+                  <div class="{{styles.divContainerRow}}">
+                    <div class="{{styles.divListItem}}">
+                      <h2>{{month}} {{year}}</h2>
+                      <p>
+                        <h3>Total Profit : {{total}}</h3><br/>
+                        <h3>Management Charge : {{management}}</h3><br/>
+                        <h3>Net Profit : {{netProfit}}</h3><br/>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="{{styles.divContainerRow}}">
+                  <p><u><b>Occupied History</b></u></p>
+                  {{#each occupiedHistory}}
+                  <div style="padding:15px">
+                    Parking Slot : {{parkingSlot}}<br/>
+                    {{rentOwnerName}} - ({{unit}})<br/>
+                    Car Plate : {{carPlate}}<br/>
+                    {{date.from}} - {{date.to}}<br/>
+                    total subcharge : {{totalCharge}}
+                  </div>
+                  {{/each}}
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
         </div>
-      </div>
-      {{/each}}
-    </div>
-    <div style="display:none" id="divRentProfit">
-      {{#each mockProfitRentData}}
-      <div class="{{styles.divContainerRow}}">
-        <div class="{{styles.divListItem}}">
-          <h2>{{month}} {{year}}</h2>
-          <p>
-            <h3>Total Profit : {{total}}</h3><br/>
-            <h3>Management Charge : {{management}}</h3><br/>
-            <h3>Net Profit : {{netProfit}}</h3><br/>
-          </p>
-        </div>
-      </div>
-      <div class="{{styles.divContainerRow}}">
-      <p><u><b>Occupied History</b></u></p>
-      {{#each occupiedHistory}}
-      <div style="padding:15px">
-        Parking Slot : {{parkingSlot}}<br/>
-        {{rentOwnerName}} - ({{unit}})<br/>
-        Car Plate : {{carPlate}}<br/>
-        {{date.from}} - {{date.to}}<br/>
-        total subcharge : {{totalCharge}}
-      </div>
-      {{/each}}
-      </div>
-      {{/each}}
-    </div>
-  </div>
+  </section>
 </template>

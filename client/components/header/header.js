@@ -4,6 +4,12 @@ Template.header.helpers({
     styles: styles
 });
 
+Template.header.helpers({
+    title: function(){
+        return Session.get('title');
+    }
+});
+
 Template.header.events({
     "click #btnLogin":function(evt,res){
         evt.preventDefault();

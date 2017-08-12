@@ -7,6 +7,7 @@ import {
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
+  
   Template.rentPage.helpers({
     styles: styles,
     rentSelectionList: function () {
@@ -33,6 +34,7 @@ if (Meteor.isClient) {
 
   Template.rentPage.onRendered(function () {
     Session.set("rent", []);
+    Session.set('title', 'Rent');
   });
 
   Template.rentPage.events({
@@ -114,13 +116,16 @@ if (Meteor.isClient) {
     'click [name=rentTypeOption]': function (evt, res) {
       evt.preventDefault();
       console.log(evt.currentTarget.innerText);
+       $('.btn-date').removeClass('isActive');
       if (evt.currentTarget.innerText === "Specify") {
         $("#divRentSpecify").css("display", "inline");
         $("#divRentRange").css("display", "none");
+         $(evt.currentTarget).addClass('isActive');
       }
       else {
         $("#divRentRange").css("display", "inline");
         $("#divRentSpecify").css("display", "none");
+         $(evt.currentTarget).addClass('isActive');
       }
     },
     'click #btnSave': function (evt, res) {

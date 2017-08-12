@@ -2,6 +2,7 @@ import styles from './guestDetail.css';
 
 if (Meteor.isClient) {
     Template.guestDetail.onRendered(function() {
+        Session.set('title', 'Guest');
     });
 
     Template.guestDetail.helpers({

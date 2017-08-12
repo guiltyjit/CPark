@@ -6,6 +6,7 @@ import {
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
+  
   Template.rentList.helpers({
     styles: styles,
     rentListTabOption: function () {
@@ -25,6 +26,7 @@ if (Meteor.isClient) {
 
   Template.rentList.onRendered(function () {
     Session.set("rent", []);
+    Session.set('title', 'Rent List');
   });
 
   Template.rentList.events({

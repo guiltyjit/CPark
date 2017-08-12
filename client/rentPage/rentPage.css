@@ -18,9 +18,24 @@
   padding:2px 10px;
   width: 100%;
 }
+
+.cardTitle {
+    background: #373737;
+    color: #fff;
+    font-size: 1.9rem;
+    padding: 0 9px;
+}
+
+.paddingSide {
+  padding: 0 9px;
+}
+
+.paddingAll {
+  padding: 9px 9px;
+}
+
 .headTitle{
-  font-size: 20px;
-  color: #1c3f94;
+  font-size: 1.6rem;
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 10px;

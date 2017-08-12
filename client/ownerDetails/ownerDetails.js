@@ -6,4 +6,7 @@ if (Meteor.isClient) {
       Router.go("rentPage");
     }
   });
+  Template.ownerDetails.onRendered(function () {
+    Session.set('title', 'Owner Details');
+  });
 }

@@ -102,3 +102,9 @@ Router.route('styles', function() {
     this.render('styles');
     this.render('footer', {to: 'footer'});
 });
+
+Router.route('notifications', function() {
+  this.render('header', {to: 'header'});
+  this.render('notifications');
+  this.render('footer', {to: 'footer'});
+});
