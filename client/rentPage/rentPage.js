@@ -128,7 +128,7 @@ if (Meteor.isClient) {
          $(evt.currentTarget).addClass('isActive');
       }
     },
-    'click #btnSave': function (evt, res) {
+    'click #btnRentOut': function (evt, res) {
       event.preventDefault();
       Router.go("rentList");
     }
