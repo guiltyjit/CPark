@@ -1,11 +1,11 @@
-<template name="guessListPage">
+<template name="guestListPage">
   <h1>
-    Guess Page
+    Guest Page
   </h1>
-  <form name="guessListPage">
+  <form name="guestListPage">
     <div class="{{styles.divContainer}}">
       <div>
-        {{#each guessList}}
+        {{#each guestList}}
         <div class="{{styles.card}}">
           <div class="{{styles.divContainerRow}}">
             <div class="{{styles.divTitleItem}}">
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="{{styles.divContainer}}">
-      <button id="btnNewGuest" type="button" class="{{styles.addNewBtn}}">Add Guess List</button>
+      <button id="btnNewGuest" type="button" class="{{styles.addNewBtn}}">Add Guest List</button>
     </div>
   </form>
 </template>

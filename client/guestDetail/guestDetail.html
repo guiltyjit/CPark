@@ -1,0 +1,31 @@
+<template name="guestDetail">
+    <form clas="guestDetail">
+        <div class="{{styles.topBorder}}">
+            <div class="{{styles.tr}}">
+                <div class="{{styles.tdLabel}}">Guest Name: </div>
+                <div><input type="text" name="guestName" /></div>
+            </div>
+            <div class="{{styles.tr}}">
+                <div class="{{styles.tdLabel}}">ETA Time: </div>
+                <div><input type="text" name="etaTime" /></div>
+            </div>
+            <div class="{{styles.tr}}">
+                <div class="{{styles.tdLabel}}">Date: </div>
+                <div><input type="text" name="date" /></div>
+            </div>
+            <div class="{{styles.tr}}">
+                <div class="{{styles.tdLabel}}">Phone number: </div>
+                <div>
+                    <input type="number" name="phoneNumber" />
+                </div>
+            </div>
+            <div class="{{styles.tr}}">
+                <div class="{{styles.tdLabel}}">Car Plate: </div>
+                <div>
+                    <input type="text" name="carPlate" />
+                </div>
+            </div>
+            <div class="{{styles.tr}}"><input type="submit" value="Register" class="{{styles.btnRegister}}"></div>
+        </div>
+    </form>
+</template>
