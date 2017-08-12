@@ -1,6 +1,6 @@
 import styles from './guestListPage.css';
 import {
-  GUESt_LIST
+  GUEST_LIST
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
