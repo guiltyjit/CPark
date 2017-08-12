@@ -43,7 +43,13 @@ Router.route('/', function () {
   this.render('footer', {to: 'footer'});
 });
 
-Router.route('ownerDetails', function () {
+Router.route('/welcome', function () {
+  this.render('header', {to: 'header'});
+  this.render('welcome');
+  this.render('footer', {to: 'footer'});
+});
+
+Router.route('/ownerDetails', function () {
   this.render('header', {to: 'header'});
   this.render('ownerDetails');
   this.render('footer', {to: 'footer'});

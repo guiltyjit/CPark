@@ -2,32 +2,27 @@
   <h1>
     Family Page
   </h1>
-  <form name="familyListPage">
-    <div class="{{styles.divContainer}}">
-      <div>
-        {{#each familyList}}
-        <div class="{{styles.card}}">
-          <div class="{{styles.divContainerRow}}">
-            <div class="{{styles.divTitleItem}}">
-              <h3>{{name}}</h3>
-            </div>
-            <div class="{{styles.divTitleItem}}">
-              <h3>{{carPlate}}</h3>
-            </div>
+  <div class="{{styles.divContainer}}">
+    <div>
+      {{#each familyList}}
+      <div class="{{styles.card}}">
+        <div class="{{styles.divContainerRow}}">
+          <div class="{{styles.divTitleItem}}">
+            <h3>{{name}}</h3>
           </div>
-          <div class="{{styles.divContainerRow}}">
-            {{#if isBooked}}
-            <button name="btnCancelBooking" type="button">Cancel Booking</button> {{else}}
-            <button id="btnBookingNow" type="button">Booking Now</button> {{/if}}
-            <button id="btnCancelBooking" type="button">Edit</button>
-            <button id="btnCancelBooking" type="button">Delete</button>
+          <div class="{{styles.divTitleItem}}">
+            <h3>{{carPlate}}</h3>
           </div>
         </div>
-        {{/each}}
+        <div class="{{styles.divContainerRow}}">
+          <button id="btnCancelBooking" type="button">Edit</button>
+          <button id="btnCancelBooking" type="button">Delete</button>
+        </div>
       </div>
+      {{/each}}
     </div>
-    <div class="{{styles.divContainer}}">
-      <button id="btnNewGuest" type="button" class="{{styles.addNewBtn}}">Add Family Member</button>
-    </div>
-  </form>
+  </div>
+  <div class="{{styles.divContainer}}">
+    <button id="btnNewFamily" type="button" class="{{styles.addNewBtn}}">Add Family Member</button>
+  </div>
 </template>
