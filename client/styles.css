@@ -64,6 +64,19 @@ article{
     background-color: #40740a;
     border-color: #40740a;
 }
+
+:global(.btn-grey){
+    color: #fff;
+    background-color: #424242;
+    border-color: #424242;
+}
+
+.btn-grey:hover,.btn-grey:focus{
+    color: #fff;
+    background-color: #424242;
+    border-color: #424242;
+}
+
 .redirect-to-add{
   margin-right: 1rem;
 }

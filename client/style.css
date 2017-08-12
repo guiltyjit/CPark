@@ -312,6 +312,18 @@ article{
     background-color: #40740a;
     border-color: #40740a;
 }
+.btn-orange{
+    color: #fff;
+    background-color: #FF5722;
+    border-color: #FF5722;
+}
+
+.btn-orange:hover,.btn-orange:focus{
+
+    color: #fff;
+    background-color: #D84315;
+    border-color: #D84315;
+}
 .btn-yellow{
     color: #000;
     background-color: #fef200;

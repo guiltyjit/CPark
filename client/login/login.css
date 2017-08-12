@@ -23,7 +23,7 @@
 }
 .btnLogin{
   composes: btn from "../style.css";
-  composes: btn-yellow from "../style.css";
+  composes: btn-orange from "../style.css";
   composes: redirect-to-add from "../style.css";
   text-decoration: none;
   border: 0px;

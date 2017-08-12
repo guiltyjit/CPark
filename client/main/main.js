@@ -67,6 +67,12 @@ Router.route('/familyDetail', function () {
   this.render('footer', {to: 'footer'});
 });
 
+Router.route('/historyListPage', function () {
+  this.render('header', {to: 'header'});
+  this.render('historyListPage');
+  this.render('footer', {to: 'footer'});
+});
+
 Router.route('styles', function() {
     this.render('header', {to: 'header'});
     this.render('styles');
