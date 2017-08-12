@@ -1,14 +1,18 @@
 <template name="header">
-    <div class="{{styles.headerWrapper}}">
-        <div class="{{styles.nav}}">
-            <nav>
-                <a href="/map">Real Life Stories</a>
-                <a href="/knowMyRight">Know Your Rights</a>
-                <a href="/safetyInformationPage">Take Action</a>
-            </nav>
+    <header class="container-header">
+        <div class="wrapper">
+            <h1>Parking status</h1>
+            <div class="menu-button js-menu-button">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
 </template>
+
 <template name="signInSystem">
     <div style="display: inline-table; margin: auto;">
         {{#with isGuest}}

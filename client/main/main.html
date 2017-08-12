@@ -1,11 +1,11 @@
 <head>
   <link rel="icon" sizes="16x16 32x32" href="/images/human-traffic-hack/icon/logotransp_EWO_icon.ico">
-  <title>Project Right</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
+  <title>CPark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
   <link rel="stylesheet" href="scripts/facebox/facebox.css" type="text/css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    
   <script src="../lib/jquery-2.1.0.min.js" type="text/javascript"></script>
   <script src="../lib/jquery.spritely-0.4.js" type="text/javascript"></script>
   <script src="../lib/facebox/facebox.js" type="text/javascript"></script>
@@ -15,7 +15,7 @@
   {{> mainLayout}}
 </body>
 
-<template name="container">
+<template name="main-container">
   <p>
     Hello!
   </p>
@@ -23,36 +23,59 @@
 <template name="asideContainer">
   <div>
     From the other side.
-
   </div>
 </template>
 
 <template name="mainLayout">
-  <div class="{{styles.containerWrapper}}">
-    <header>
-      {{> yield "header"}}
-    </header>
-    <main>
-      <aside>
-        {{> yield "aside"}}
-      </aside>
-      <article>
-        {{> yield}} {{> loginRegisterTemplate}}
-      </article>
-    </main>
-    <footer>
-      {{> yield "footer"}}
-    </footer>
+  <div class="fullScreen-menu-container js-menu-container">
+        <a class="menu-button js-menu-close">
+            <div class="menu-icon is-active">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+        <div class="fullScreen-menu">
+            <nav class="fullScreen-menu__nav">
+                <ul>
+                    <li>
+                        <a href="/" class="close-fullScreen">Home</a>
+                    </li>
+                    <li>
+                        <a href="/ownerDetails" class="close-fullScreen">Parking</a>
+                    </li>
+                    <li>
+                        <a href="/rentPage" class="close-fullScreen">Rent</a>
+                    </li>
+                    <li>
+                      <a href="/rentList" class="close-fullScreen">Rent List</a>
+                    </li>
+                    <li>
+                      <a href="/guessListPage" class="close-fullScreen">Guest List</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main-container">
+        <article>
+          <header>
+            {{> yield "header"}}
+          </header>
+          <aside>
+            {{> yield "aside"}}
+          </aside>
+
+          {{> yield}} {{> loginRegisterTemplate}}
+
+          {{> yield "footer"}}
+     </article>
   </div>
 </template>
 
 <template name="loginRegisterTemplate">
   <div class="modal fade" id="loginRegisterModal" style="bottom:10%;left:50%;right:50%;width:550px;">
 <div class="modal-content" style="height:100%">
-
-<!--div class="modal-header" style="height:10%">
-          <h4 class="modal-title">Login / Register</h4>
-        </div-->
 
 <div class="modal-body loginSystem" style="height:100%">
 <ul class="nav nav-tabs">

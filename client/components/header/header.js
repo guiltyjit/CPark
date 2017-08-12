@@ -5,10 +5,20 @@ Template.header.helpers({
 });
 
 Template.header.events({
-  "click #btnLogin":function(evt,res){
-    evt.preventDefault();
-    $('#loginRegisterModal').modal('show');
-  }
+    "click #btnLogin":function(evt,res){
+        evt.preventDefault();
+        $('#loginRegisterModal').modal('show');
+    },
+    'click .js-menu-button': function (event) {
+        event.preventDefault();
+        function openMenu() {
+            var fullScreenContainer = document.querySelector('.js-menu-container');
+            if (!fullScreenContainer.classList.contains('is-open')) {
+                fullScreenContainer.classList.add('is-open');
+            }
+        }
+        openMenu();
+    }
 });
 
 Template.signInSystem.onCreated(function() {
