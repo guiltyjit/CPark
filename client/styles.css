@@ -22,12 +22,6 @@ form{
     margin: 0 auto;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    flex: auto;
-    padding: 20px 15% 20px;
-}
 article{
   width: 100%;
 }

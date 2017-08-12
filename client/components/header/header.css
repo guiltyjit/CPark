@@ -23,40 +23,6 @@
     width:250px;
 }
 
-.nav {
-    composes: container from "../../style.css";
-    background-color:#FF5722;
-    color: #BDBDBD;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: #BDBDBD;
-    padding: 20px;
-}
-nav a :hover{
-    color: #BDBDBD !important;
-    padding: 0.9em 0;
-
-}
-
-a{
-    text-align: center;
-}
-
-a:hover{
-    color: #BDBDBD !important;
-    text-decoration: none;
-    border: 1px solid grey;
-}
-
 .advWrapper {
     composes: container from "../../style.css";
     background: url("http://cdn2.hubspot.net/hubfs/1915995/bg/blue-bg.png?t=1468484873016") center repeat;
