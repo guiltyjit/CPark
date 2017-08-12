@@ -1,11 +1,11 @@
-<template name="guestListPage">
+<template name="familyListPage">
   <h1>
-    Guest Page
+    Family Page
   </h1>
-  <form name="guestListPage">
+  <form name="familyListPage">
     <div class="{{styles.divContainer}}">
       <div>
-        {{#each guestList}}
+        {{#each familyList}}
         <div class="{{styles.card}}">
           <div class="{{styles.divContainerRow}}">
             <div class="{{styles.divTitleItem}}">
@@ -13,14 +13,6 @@
             </div>
             <div class="{{styles.divTitleItem}}">
               <h3>{{carPlate}}</h3>
-            </div>
-          </div>
-          <div class="{{styles.divContainerRow}}">
-            <div class="{{styles.divTitleItem}}">
-              ETA <h4>{{ETA}}</h4>
-            </div>
-            <div class="{{styles.divTitleItem}}">
-              <h4>{{date}}</h4>
             </div>
           </div>
           <div class="{{styles.divContainerRow}}">
@@ -35,7 +27,7 @@
       </div>
     </div>
     <div class="{{styles.divContainer}}">
-      <button id="btnNewGuest" type="button" class="{{styles.addNewBtn}}">Add Guest</button>
+      <button id="btnNewGuest" type="button" class="{{styles.addNewBtn}}">Add Family Member</button>
     </div>
   </form>
 </template>

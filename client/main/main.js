@@ -39,7 +39,7 @@ Router.configure({
 
 Router.route('/', function () {
   this.render('header', {to: 'header'});
-  this.render('welcome');
+  this.render('login');
   this.render('footer', {to: 'footer'});
 });
 
@@ -70,6 +70,24 @@ Router.route('/guestListPage', function () {
 Router.route('/guestDetail', function () {
   this.render('header', {to: 'header'});
   this.render('guestDetail');
+  this.render('footer', {to: 'footer'});
+});
+
+Router.route('/familyListPage', function () {
+  this.render('header', {to: 'header'});
+  this.render('familyListPage');
+  this.render('footer', {to: 'footer'});
+});
+
+Router.route('/familyDetail', function () {
+  this.render('header', {to: 'header'});
+  this.render('familyDetail');
+  this.render('footer', {to: 'footer'});
+});
+
+Router.route('/historyListPage', function () {
+  this.render('header', {to: 'header'});
+  this.render('historyListPage');
   this.render('footer', {to: 'footer'});
 });
 

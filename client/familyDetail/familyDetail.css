@@ -10,10 +10,13 @@
   height: 3.5rem;
 }
 .tdLabel{
-  padding:2px 10px;
   font-weight: bold;
-  width: 120px;
+  width: 250px;
   min-width: 80px;
+}
+.tr small{
+  font-size: 14px;
+  line-height: 1.1;
 }
 .right{
   float: right;
@@ -21,10 +24,11 @@
 .topBorder{
   margin-top: 20px;
 }
-.btnLogin{
+.btnRegister{
   composes: btn from "../style.css";
-  composes: btn-orange from "../style.css";
+  composes: btn-yellow from "../style.css";
   composes: redirect-to-add from "../style.css";
   text-decoration: none;
   border: 0px;
+  font-size: 14px;
 }

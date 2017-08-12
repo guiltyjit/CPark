@@ -1,21 +1,21 @@
-import styles from './guestListPage.css';
+import styles from './familyListPage.css';
 import {
-  GUEST_LIST
+  FAMILY_LIST
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
-  Template.guestListPage.helpers({
+  Template.familyListPage.helpers({
     styles: styles,
-    guestList: function () {
-      return GUEST_LIST
+    familyList: function () {
+      return FAMILY_LIST
     }
   });
 
-  Template.guestListPage.onRendered(function () {
+  Template.familyListPage.onRendered(function () {
     Session.set("rent", []);
   });
 
-  Template.guestListPage.events({
+  Template.familyListPage.events({
     'click #btnAddRent': function (evt, res) {
       function getPartnerInformation(key, id) {
         var returnValue = {};
