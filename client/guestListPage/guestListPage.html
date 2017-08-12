@@ -1,38 +1,44 @@
 <template name="guestListPage">
-  <form name="guestListPage">
-    <div class="{{styles.divContainer}}">
-      <div>
-        {{#each guestList}}
-        <div class="{{styles.card}}">
-          <div class="{{styles.divContainerRow}}">
-            <div class="{{styles.divTitleItem}}">
-              <h3>{{name}}</h3>
-            </div>
-            <div class="{{styles.divTitleItem}}">
-              <h3>{{carPlate}}</h3>
+        <section class="container-body">
+        <div class="wrapper">
+            <div class="card topMargin">
+        <form name="guestListPage">
+          <div class="{{styles.divContainer}}">
+            <div>
+              {{#each guestList}}
+              <div class="{{styles.card}} topMargin">
+                <div class="{{styles.divContainerRow}}">
+                  <div class="{{styles.divTitleItem}}">
+                    <h3>{{name}}</h3>
+                  </div>
+                  <div class="{{styles.divTitleItem}}">
+                    <h3>{{carPlate}}</h3>
+                  </div>
+                </div>
+                <div class="{{styles.divContainerRow}}">
+                  <div class="{{styles.divTitleItem}}">
+                    ETA <h4>{{ETA}}</h4>
+                  </div>
+                  <div class="{{styles.divTitleItem}}">
+                    <h4>{{date}}</h4>
+                  </div>
+                </div>
+                <div class="{{styles.divContainerRow}}">
+                  {{#if isBooked}}
+                  <button name="btnCancelBooking" type="button" class="{{styles.btnCancel}}">Cancel Booking</button> {{else}}
+                  <button id="btnBookingNow" type="button" class="{{styles.btnCancel}}">Booking Now</button> {{/if}}
+                  <button id="btnCancelBooking" type="button" class="{{styles.btnCancel}}">Edit</button>
+                  <button id="btnCancelBooking" type="button" class="{{styles.btnCancel}}">Delete</button>
+                </div>
+              </div>
+              {{/each}}
             </div>
           </div>
-          <div class="{{styles.divContainerRow}}">
-            <div class="{{styles.divTitleItem}}">
-              ETA <h4>{{ETA}}</h4>
-            </div>
-            <div class="{{styles.divTitleItem}}">
-              <h4>{{date}}</h4>
-            </div>
+          <div class="{{styles.divContainer}} topMargin">
+            <button id="btnNewGuest" type="button" class="{{styles.addNewBtn}}">Add Guest</button>
           </div>
-          <div class="{{styles.divContainerRow}}">
-            {{#if isBooked}}
-            <button name="btnCancelBooking" type="button">Cancel Booking</button> {{else}}
-            <button id="btnBookingNow" type="button">Booking Now</button> {{/if}}
-            <button id="btnCancelBooking" type="button">Edit</button>
-            <button id="btnCancelBooking" type="button">Delete</button>
-          </div>
+        </form>
         </div>
-        {{/each}}
-      </div>
     </div>
-    <div class="{{styles.divContainer}}">
-      <button id="btnNewGuest" type="button" class="{{styles.addNewBtn}}">Add Guest</button>
-    </div>
-  </form>
+  </section>
 </template>
