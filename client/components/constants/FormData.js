@@ -102,6 +102,7 @@ export const DATE_LIST = [
 export const MOCK_PROFIT_RENT_DATA = [
   {
     month: "July",
+    year: "2017",
     total: "RM 150.00",
     netProfit: "RM 132.00",
     management: "RM 18.00",
@@ -119,6 +120,7 @@ export const MOCK_PROFIT_RENT_DATA = [
   },
   {
     month: "June",
+    year: "2017",
     total: "RM 130.00",
     netProfit: "RM 114.40",
     management: "RM 15.60",

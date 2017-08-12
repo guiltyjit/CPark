@@ -12,9 +12,13 @@ if (Meteor.isClient) {
       return RENT_LIST_TAB_OPTION
     },
     mockProfitRentData: function(){
+      console.log('MOCK_PROFIT_RENT_DATA');
+      console.log(MOCK_PROFIT_RENT_DATA);
       return MOCK_PROFIT_RENT_DATA
     },
     mockCurrentRentData: function(){
+      console.log('MOCK_CURRENT_RENT_DATA');
+      console.log(MOCK_CURRENT_RENT_DATA);
       return MOCK_CURRENT_RENT_DATA
     }
   });
@@ -99,16 +103,16 @@ if (Meteor.isClient) {
       }
       Session.set("rent", output);
     },
-    'click [name=rentTypeOption]': function (evt, res) {
+    'click [name=rentListDisplay]': function (evt, res) {
       evt.preventDefault();
       console.log(evt.currentTarget.innerText);
-      if (evt.currentTarget.innerText === "Specify") {
-        $("#divRentSpecify").css("display", "inline");
-        $("#divRentRange").css("display", "none");
+      if (evt.currentTarget.innerText === "Profits") {
+        $("#divRentProfit").css("display", "inline");
+        $("#divRentCurrent").css("display", "none");
       }
       else {
-        $("#divRentRange").css("display", "inline");
-        $("#divRentSpecify").css("display", "none");
+        $("#divRentCurrent").css("display", "inline");
+        $("#divRentProfit").css("display", "none");
       }
     },
     'submit form': function (evt, res) {
