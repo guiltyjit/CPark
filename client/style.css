@@ -212,9 +212,26 @@ aside.is-active {
     justify-content: space-between;
 }
 
-:global button{
+:global button,
+:global input[type="button"],
+:global input[type="submit"]{
+    border: 0;
     border-radius: 5%;
     cursor: pointer;
+    background-color: #616161;
+    color: #ffffff;
+    font-size: 1.6rem;
+    padding: 9px 18px;
+}
+
+:global button.isActive{
+    border: 0;
+    border-radius: 5%;
+    cursor: pointer;
+    background-color: #428d90;
+    color: #ffffff;
+    font-size: 1.6rem;
+    padding: 9px 18px;
 }
 
 :global .btn-rent-out {
