@@ -20,7 +20,6 @@ form{
 .containerWrapper:global {
     width: 100%;
     margin: 0 auto;
-    background: #263238;
 }
 
 main {

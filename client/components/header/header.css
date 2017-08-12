@@ -1,5 +1,5 @@
 .headerWrapper {
-    background-color: black;
+    background-color: #FF5722;
 }
 
 .topLayerContainer {
@@ -25,7 +25,7 @@
 
 .nav {
     composes: container from "../../style.css";
-    background-color:black;
+    background-color:#FF5722;
     color: #BDBDBD;
 }
 
