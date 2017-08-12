@@ -50,8 +50,8 @@ export const MONTH_LIST = [{
 ];
 
 export const RENT_TYPE_SELECTION_LIST = [
-  { key: "SPECIFY", label: "Specify" },
-  { key: "RANGE", label: "Range" }
+  { key: "RANGE", label: "Range" },
+  { key: "SPECIFY", label: "Specify" }
 ]
 
 export const RENT_SELECTION_LIST = [

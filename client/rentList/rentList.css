@@ -111,3 +111,10 @@ textarea{
   width: 120%;
   margin-left: 10px;
 }
+.columnSort {
+  flex-direction: column;
+}
+
+.feesColumn{
+
+}

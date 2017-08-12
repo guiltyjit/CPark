@@ -206,10 +206,15 @@ aside.is-active {
 :global .topMargin {
     margin-top: 9px;
 }
+:global .bottomMargin {
+    margin-bottom: 9px;
+}
 
 :global .colum-max-width{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
 }
 
 :global button,

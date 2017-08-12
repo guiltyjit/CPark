@@ -35,6 +35,7 @@ if (Meteor.isClient) {
   Template.rentPage.onRendered(function () {
     Session.set("rent", []);
     Session.set('title', 'Rent');
+    $('.btn-date')[0].addClass('isActive');
   });
 
   Template.rentPage.events({
@@ -117,6 +118,7 @@ if (Meteor.isClient) {
       evt.preventDefault();
       console.log(evt.currentTarget.innerText);
        $('.btn-date').removeClass('isActive');
+
       if (evt.currentTarget.innerText === "Specify") {
         $("#divRentSpecify").css("display", "inline");
         $("#divRentRange").css("display", "none");

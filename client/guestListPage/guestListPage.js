@@ -1,6 +1,6 @@
 import styles from './guestListPage.css';
 import {
-  GUEST_LIST
+  GUESt_LIST
 } from '../components/constants/FormData';
 
 if (Meteor.isClient) {
@@ -13,6 +13,7 @@ if (Meteor.isClient) {
 
   Template.guestListPage.onRendered(function () {
     Session.set("rent", []);
+    Session.set('title', 'Guest List');
   });
 
   Template.guestListPage.events({
